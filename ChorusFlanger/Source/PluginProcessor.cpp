@@ -24,6 +24,8 @@ Chorus_flangerAudioProcessor::Chorus_flangerAudioProcessor()
                        )
 #endif
 {
+    //=============================================================================
+    //PARAMETERS!
     addParameter(mDryWetParameter = new AudioParameterFloat("drywet",
                                                             "DryWet",
                                                             0.0,
@@ -34,7 +36,33 @@ Chorus_flangerAudioProcessor::Chorus_flangerAudioProcessor()
                                                             0.0,
                                                             1.0,
                                                             0.5));
+    addParameter(mRateParameter = new AudioParameterFloat("rate",
+                                                          "Rate",
+                                                          0.1f,
+                                                          20.f,
+                                                          10.f));
+    addParameter(mPhaseOffsetParameter= new AudioParameterFloat("phaseoffset",
+                                                          "Phase Offset",
+                                                          0.0f,
+                                                          1.f,
+                                                          0.f));
+    addParameter(mFeedbackParameter= new AudioParameterFloat("feedback",
+                                                                "Feedback",
+                                                                0,
+                                                                0.98,
+                                                                0.5));
+   //===========================================================================
+   //VARIABLES!
+    mDelayTimeSmoothed = 0;
+    mCircularBufferLeft = nullptr;
+    mCircularBufferRight = nullptr;
+    mCircularBufferWriteHead = 0;
+    mCircularBufferLength = 0;
+    mDelayTimeInSamples = 0;
+    mDelayReadHead = 0;
     
+    mFeedbackLeft = 0;
+    mFeedbackRight = 0;
 }
 
 Chorus_flangerAudioProcessor::~Chorus_flangerAudioProcessor()

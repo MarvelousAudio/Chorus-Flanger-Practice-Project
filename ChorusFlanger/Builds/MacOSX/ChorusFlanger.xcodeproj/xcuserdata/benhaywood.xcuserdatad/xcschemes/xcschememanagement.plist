@@ -7,12 +7,12 @@
 		<key>Chorus/Flanger - AU.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Chorus/Flanger - All.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<key>Chorus/Flanger - Shared Code.xcscheme_^#shared#^_</key>
 		<dict>

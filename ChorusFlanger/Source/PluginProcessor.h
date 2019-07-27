@@ -81,6 +81,8 @@ private:
     float* mCircularBufferLeft;
     float* mCircularBufferRight;
     
+    float mDelayTimeSmoothed;
+    
 //    std::unique_ptr<float []> mCircularBufferLeft;
 //    std::unique_ptr<float []> mCircularBufferRight;
 };
