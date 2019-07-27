@@ -58,4 +58,29 @@ public:
 private:
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Chorus_flangerAudioProcessor)
+    
+    //parameters
+    //==============================================================================
+    AudioParameterFloat* mDryWetParameter;
+    AudioParameterFloat* mDepthParameter;
+    AudioParameterFloat* mRateParameter;
+    AudioParameterFloat* mPhaseOffsetParameter;
+    AudioParameterFloat* mFeedbackParameter;
+    
+    AudioParameterFloat* mTypeParameter;
+    
+    float mFeedbackLeft;
+    float mFeedbackRight;
+    
+    float mDelayTimeInSamples;
+    float mDelayReadHead;
+    
+    int mCircularBufferWriteHead;
+    int mCircularBufferLength;
+    
+    float* mCircularBufferLeft;
+    float* mCircularBufferRight;
+    
+//    std::unique_ptr<float []> mCircularBufferLeft;
+//    std::unique_ptr<float []> mCircularBufferRight;
 };
