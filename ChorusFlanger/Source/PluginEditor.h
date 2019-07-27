@@ -32,4 +32,7 @@ private:
     Chorus_flangerAudioProcessor& processor;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Chorus_flangerAudioProcessorEditor)
+    
+    Slider mDryWetSlider;
+    Slider mFeedbackSlider;
 };

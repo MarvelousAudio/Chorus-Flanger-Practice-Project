@@ -24,6 +24,17 @@ Chorus_flangerAudioProcessor::Chorus_flangerAudioProcessor()
                        )
 #endif
 {
+    addParameter(mDryWetParameter = new AudioParameterFloat("drywet",
+                                                            "DryWet",
+                                                            0.0,
+                                                            1.0,
+                                                            0.5));
+    addParameter(mDepthParameter = new AudioParameterFloat("depth",
+                                                            "Depth",
+                                                            0.0,
+                                                            1.0,
+                                                            0.5));
+    
 }
 
 Chorus_flangerAudioProcessor::~Chorus_flangerAudioProcessor()

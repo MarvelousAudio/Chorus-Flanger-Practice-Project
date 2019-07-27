@@ -18,6 +18,7 @@ Chorus_flangerAudioProcessorEditor::Chorus_flangerAudioProcessorEditor (Chorus_f
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
     setSize (400, 300);
+    
 }
 
 Chorus_flangerAudioProcessorEditor::~Chorus_flangerAudioProcessorEditor()
